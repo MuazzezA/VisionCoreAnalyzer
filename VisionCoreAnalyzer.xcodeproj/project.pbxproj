@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F271DD582DB5135200BB788F /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271DD572DB5135200BB788F /* AppLabel.swift */; };
 		F2E9C3F62DB4FD3900E8F745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9C3F52DB4FD3900E8F745 /* AppDelegate.swift */; };
 		F2E9C3F82DB4FD3900E8F745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9C3F72DB4FD3900E8F745 /* SceneDelegate.swift */; };
 		F2E9C3FA2DB4FD3900E8F745 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9C3F92DB4FD3900E8F745 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F271DD572DB5135200BB788F /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
 		F2E9C3F22DB4FD3900E8F745 /* VisionCoreAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionCoreAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E9C3F52DB4FD3900E8F745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2E9C3F72DB4FD3900E8F745 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F271DD512DB5122900BB788F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F2E9C3F92DB4FD3900E8F745 /* ViewController.swift */,
+				F271DD592DB5138000BB788F /* Label */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F271DD532DB5124D00BB788F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F2E9C3FB2DB4FD3900E8F745 /* Main.storyboard */,
+				F2E9C3FE2DB4FD3A00E8F745 /* Assets.xcassets */,
+				F2E9C4002DB4FD3A00E8F745 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F271DD542DB5126600BB788F /* Vision */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vision;
+			sourceTree = "<group>";
+		};
+		F271DD552DB5126E00BB788F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F271DD562DB5127600BB788F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F271DD592DB5138000BB788F /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				F271DD572DB5135200BB788F /* AppLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
 		F2E9C3E92DB4FD3900E8F745 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +106,14 @@
 		F2E9C3F42DB4FD3900E8F745 /* VisionCoreAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
+				F2E9C4032DB4FD3B00E8F745 /* Info.plist */,
 				F2E9C3F52DB4FD3900E8F745 /* AppDelegate.swift */,
 				F2E9C3F72DB4FD3900E8F745 /* SceneDelegate.swift */,
-				F2E9C3F92DB4FD3900E8F745 /* ViewController.swift */,
-				F2E9C3FB2DB4FD3900E8F745 /* Main.storyboard */,
-				F2E9C3FE2DB4FD3A00E8F745 /* Assets.xcassets */,
-				F2E9C4002DB4FD3A00E8F745 /* LaunchScreen.storyboard */,
-				F2E9C4032DB4FD3B00E8F745 /* Info.plist */,
+				F271DD562DB5127600BB788F /* Helpers */,
+				F271DD552DB5126E00BB788F /* Models */,
+				F271DD542DB5126600BB788F /* Vision */,
+				F271DD532DB5124D00BB788F /* Resources */,
+				F271DD512DB5122900BB788F /* Views */,
 			);
 			path = VisionCoreAnalyzer;
 			sourceTree = "<group>";
@@ -103,7 +154,7 @@
 				};
 			};
 			buildConfigurationList = F2E9C3ED2DB4FD3900E8F745 /* Build configuration list for PBXProject "VisionCoreAnalyzer" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -140,6 +191,7 @@
 			files = (
 				F2E9C3FA2DB4FD3900E8F745 /* ViewController.swift in Sources */,
 				F2E9C3F62DB4FD3900E8F745 /* AppDelegate.swift in Sources */,
+				F271DD582DB5135200BB788F /* AppLabel.swift in Sources */,
 				F2E9C3F82DB4FD3900E8F745 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
