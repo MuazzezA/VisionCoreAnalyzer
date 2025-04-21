@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F22BEF2B2DB6DBA300E17843 /* FilterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22BEF2A2DB6DB9B00E17843 /* FilterCategory.swift */; };
+		F22BEF2D2DB6DDAD00E17843 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22BEF2C2DB6DDA700E17843 /* FilterViewController.swift */; };
 		F271DD582DB5135200BB788F /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271DD572DB5135200BB788F /* AppLabel.swift */; };
 		F2E9C3F62DB4FD3900E8F745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9C3F52DB4FD3900E8F745 /* AppDelegate.swift */; };
 		F2E9C3F82DB4FD3900E8F745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9C3F72DB4FD3900E8F745 /* SceneDelegate.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F22BEF2A2DB6DB9B00E17843 /* FilterCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCategory.swift; sourceTree = "<group>"; };
+		F22BEF2C2DB6DDA700E17843 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		F271DD572DB5135200BB788F /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
 		F2E9C3F22DB4FD3900E8F745 /* VisionCoreAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionCoreAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E9C3F52DB4FD3900E8F745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,20 +46,11 @@
 		F271DD512DB5122900BB788F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F22BEF2C2DB6DDA700E17843 /* FilterViewController.swift */,
 				F2E9C3F92DB4FD3900E8F745 /* ViewController.swift */,
 				F271DD592DB5138000BB788F /* Label */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		F271DD532DB5124D00BB788F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F2E9C3FB2DB4FD3900E8F745 /* Main.storyboard */,
-				F2E9C3FE2DB4FD3A00E8F745 /* Assets.xcassets */,
-				F2E9C4002DB4FD3A00E8F745 /* LaunchScreen.storyboard */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		F271DD542DB5126600BB788F /* Vision */ = {
@@ -68,6 +63,7 @@
 		F271DD552DB5126E00BB788F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F22BEF2A2DB6DB9B00E17843 /* FilterCategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,13 +102,15 @@
 		F2E9C3F42DB4FD3900E8F745 /* VisionCoreAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
+				F2E9C3FB2DB4FD3900E8F745 /* Main.storyboard */,
+				F2E9C3FE2DB4FD3A00E8F745 /* Assets.xcassets */,
+				F2E9C4002DB4FD3A00E8F745 /* LaunchScreen.storyboard */,
 				F2E9C4032DB4FD3B00E8F745 /* Info.plist */,
 				F2E9C3F52DB4FD3900E8F745 /* AppDelegate.swift */,
 				F2E9C3F72DB4FD3900E8F745 /* SceneDelegate.swift */,
 				F271DD562DB5127600BB788F /* Helpers */,
 				F271DD552DB5126E00BB788F /* Models */,
 				F271DD542DB5126600BB788F /* Vision */,
-				F271DD532DB5124D00BB788F /* Resources */,
 				F271DD512DB5122900BB788F /* Views */,
 			);
 			path = VisionCoreAnalyzer;
@@ -189,7 +187,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22BEF2D2DB6DDAD00E17843 /* FilterViewController.swift in Sources */,
 				F2E9C3FA2DB4FD3900E8F745 /* ViewController.swift in Sources */,
+				F22BEF2B2DB6DBA300E17843 /* FilterCategory.swift in Sources */,
 				F2E9C3F62DB4FD3900E8F745 /* AppDelegate.swift in Sources */,
 				F271DD582DB5135200BB788F /* AppLabel.swift in Sources */,
 				F2E9C3F82DB4FD3900E8F745 /* SceneDelegate.swift in Sources */,
@@ -222,6 +222,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -285,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

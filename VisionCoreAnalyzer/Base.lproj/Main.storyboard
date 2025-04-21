@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hy5-xA-war">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -12,13 +12,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VisionCoreAnalyzer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="BYZ-38-t0r" customClass="ViewController" customModule="VisionCoreAnalyzer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z47-5s-cGB" userLabel="Blur">
-                                <rect key="frame" x="16" y="164" width="361" height="48"/>
+                                <rect key="frame" x="16" y="184" width="358" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lpd-Xu-9Op" customClass="AppLabel" customModule="VisionCoreAnalyzer" customModuleProvider="target">
                                         <rect key="frame" x="7.9999999999999982" y="13.666666666666657" width="30.333333333333329" height="21"/>
@@ -27,7 +27,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6Gb-pf-Mm9">
-                                        <rect key="frame" x="335" y="16" width="18" height="16.666666666666664"/>
+                                        <rect key="frame" x="332" y="16" width="18" height="16.666666666666664"/>
                                         <color key="tintColor" name="Text"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="dLL-ua-Ta6"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VisionCore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UI-5p-PGm" customClass="AppLabel" customModule="VisionCoreAnalyzer" customModuleProvider="target">
-                                <rect key="frame" x="16" y="122" width="82.666666666666671" height="24"/>
+                                <rect key="frame" x="16" y="142" width="82.666666666666671" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="ET6-FV-hId"/>
                                 </constraints>
@@ -63,16 +63,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Grx-4U-Gvd" userLabel="Color">
-                                <rect key="frame" x="16" y="230" width="361" height="48"/>
+                                <rect key="frame" x="16" y="250" width="358" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dj6-0b-0of" customClass="AppLabel" customModule="VisionCoreAnalyzer" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="13.666666666666657" width="41" height="21"/>
+                                        <rect key="frame" x="8" y="13.666666666666686" width="41" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AgF-hN-UVi">
-                                        <rect key="frame" x="335" y="16" width="18" height="16.666666666666664"/>
+                                        <rect key="frame" x="332" y="16" width="18" height="16.666666666666664"/>
                                         <color key="tintColor" name="Text"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="liS-C6-8Ui"/>
@@ -113,6 +113,7 @@
                             <constraint firstItem="Grx-4U-Gvd" firstAttribute="top" secondItem="z47-5s-cGB" secondAttribute="bottom" constant="18" id="z4X-FR-GK1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="8d2-sg-Wnz"/>
                     <connections>
                         <outletCollection property="viewButtons" destination="z47-5s-cGB" collectionClass="NSMutableArray" id="KR9-Zk-bSL"/>
                         <outletCollection property="viewButtons" destination="Grx-4U-Gvd" collectionClass="NSMutableArray" id="yaS-b9-Xfk"/>
@@ -122,22 +123,73 @@
                 <tapGestureRecognizer id="Azx-RD-ZgD" userLabel="TapBlur"/>
                 <tapGestureRecognizer id="dG3-JQ-FmF" userLabel="TapColor"/>
             </objects>
-            <point key="canvasLocation" x="98" y="-6"/>
+            <point key="canvasLocation" x="1026.1538461538462" y="-6.3981042654028437"/>
         </scene>
-        <!--View Controller-->
+        <!--Filter View Controller-->
         <scene sceneID="jiX-On-ATx">
             <objects>
-                <viewController id="emD-f3-6Ci" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="filter" id="emD-f3-6Ci" customClass="FilterViewController" customModule="VisionCoreAnalyzer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5cE-Rr-7It">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WI-Ca-vR0" customClass="AppLabel" customModule="VisionCoreAnalyzer" customModuleProvider="target">
+                                <rect key="frame" x="16" y="98" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSS-Vy-Jdv">
+                                <rect key="frame" x="20" y="143" width="350" height="215"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="61W-t7-XeM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cqF-u3-P5O"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="0WI-Ca-vR0" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="16" id="I8L-gm-CMk"/>
+                            <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="0WI-Ca-vR0" secondAttribute="trailing" constant="16" id="LtH-jF-MxF"/>
+                            <constraint firstItem="wSS-Vy-Jdv" firstAttribute="top" secondItem="0WI-Ca-vR0" secondAttribute="bottom" constant="24" id="Njw-9v-R0P"/>
+                            <constraint firstItem="wSS-Vy-Jdv" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="20" id="TrK-Z2-XYa"/>
+                            <constraint firstItem="wSS-Vy-Jdv" firstAttribute="centerX" secondItem="5cE-Rr-7It" secondAttribute="centerX" id="XjJ-Rk-HbY"/>
+                            <constraint firstItem="0WI-Ca-vR0" firstAttribute="top" secondItem="cqF-u3-P5O" secondAttribute="top" constant="4" id="bBK-aR-kxM"/>
+                            <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="wSS-Vy-Jdv" secondAttribute="trailing" constant="20" id="xbm-6a-eqG"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="w6X-wE-VD8"/>
+                    <connections>
+                        <outlet property="filterLabel" destination="0WI-Ca-vR0" id="avi-V0-DeA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Pm-uO-OXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="-6"/>
+            <point key="canvasLocation" x="1912.3076923076922" y="-6.3981042654028437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IpD-4Q-sis">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hy5-xA-war" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jxl-gS-QKN">
+                        <rect key="frame" x="0.0" y="94" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="muc-Kp-YkY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4c-Dx-bxr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96.92307692307692" y="-6.3981042654028437"/>
         </scene>
     </scenes>
     <resources>
