@@ -39,7 +39,7 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
                 slider.minimumValue = sliderOption.minValue
                 slider.maximumValue = sliderOption.maxValue
                 slider.value = sliderOption.defaultValue
-                label.heightAnchor.constraint(equalToConstant: 38).isActive = true
+                slider.heightAnchor.constraint(equalToConstant: 38).isActive = true
                 slider.addTarget(self, action: #selector(sliderValueDidChange(_:)), for: .valueChanged)
                 
                 
