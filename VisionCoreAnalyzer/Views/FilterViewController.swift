@@ -33,13 +33,13 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
                 let label = AppLabel()
                 label.text = sliderOption.title
                 label.styleRawValue = 1
-                label.heightAnchor.constraint(equalToConstant: 20).isActive = true
+                // label.heightAnchor.constraint(equalToConstant: 20).isActive = true
                 
                 let slider = UISlider()
                 slider.minimumValue = sliderOption.minValue
                 slider.maximumValue = sliderOption.maxValue
                 slider.value = sliderOption.defaultValue
-                slider.heightAnchor.constraint(equalToConstant: 38).isActive = true
+                // slider.heightAnchor.constraint(equalToConstant: 38).isActive = true
                 slider.addTarget(self, action: #selector(sliderValueDidChange(_:)), for: .valueChanged)
                 
                 
@@ -90,5 +90,9 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
         let roundedStepValue = round(sender.value / step) * step
         sender.value = roundedStepValue
         print("Slider step value \(Int(roundedStepValue))")
+    }
+    
+    @IBAction func applyButtonTapped(_ sender: UIButton) {
+        print("apply changes")
     }
 }

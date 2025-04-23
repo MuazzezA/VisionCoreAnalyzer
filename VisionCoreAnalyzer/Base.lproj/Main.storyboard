@@ -202,24 +202,38 @@
                                 <color key="backgroundColor" name="Background"/>
                                 <constraints>
                                     <constraint firstItem="AYw-xK-XFq" firstAttribute="leading" secondItem="wk3-ZM-RTz" secondAttribute="leading" constant="8" id="4iT-he-GGP"/>
-                                    <constraint firstAttribute="height" constant="272" id="j8U-wY-41b"/>
                                     <constraint firstAttribute="bottom" secondItem="AYw-xK-XFq" secondAttribute="bottom" id="qg5-ic-Mv4"/>
                                     <constraint firstAttribute="trailing" secondItem="AYw-xK-XFq" secondAttribute="trailing" constant="8" id="sQI-He-xPh"/>
                                     <constraint firstItem="AYw-xK-XFq" firstAttribute="top" secondItem="wk3-ZM-RTz" secondAttribute="top" id="yTX-VX-vVR"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGr-3Z-OER">
+                                <rect key="frame" x="100" y="741" width="190" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="EHa-mQ-yW1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Apply"/>
+                                <connections>
+                                    <action selector="applyButtonTapped:" destination="emD-f3-6Ci" eventType="touchUpInside" id="L17-9Q-MTt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cqF-u3-P5O"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="VLj-4L-6g8" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="100" id="1b6-jo-3Fh"/>
                             <constraint firstItem="0WI-Ca-vR0" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="16" id="2mv-Cg-HH2"/>
+                            <constraint firstItem="hGr-3Z-OER" firstAttribute="bottom" secondItem="cqF-u3-P5O" secondAttribute="bottom" id="7kY-LC-pMa"/>
+                            <constraint firstItem="hGr-3Z-OER" firstAttribute="top" secondItem="wk3-ZM-RTz" secondAttribute="bottom" constant="4" id="8Hy-Mv-eZ0"/>
                             <constraint firstItem="wk3-ZM-RTz" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" id="Gtp-TK-U4l"/>
                             <constraint firstItem="wk3-ZM-RTz" firstAttribute="top" secondItem="VLj-4L-6g8" secondAttribute="bottom" constant="15" id="LiM-OI-Vip"/>
                             <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="wSS-Vy-Jdv" secondAttribute="trailing" constant="20" id="P9W-Kv-9if"/>
                             <constraint firstItem="0WI-Ca-vR0" firstAttribute="top" secondItem="cqF-u3-P5O" secondAttribute="top" constant="4" id="ThX-JN-1dw"/>
+                            <constraint firstItem="hGr-3Z-OER" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="100" id="aLl-eT-huW"/>
                             <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="0WI-Ca-vR0" secondAttribute="trailing" constant="16" id="cUh-yb-tJ1"/>
                             <constraint firstItem="wk3-ZM-RTz" firstAttribute="trailing" secondItem="cqF-u3-P5O" secondAttribute="trailing" id="fy9-mX-N35"/>
+                            <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="hGr-3Z-OER" secondAttribute="trailing" constant="100" id="kSp-t3-MGl"/>
                             <constraint firstItem="wSS-Vy-Jdv" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="20" id="n24-e0-0cG"/>
                             <constraint firstItem="VLj-4L-6g8" firstAttribute="top" secondItem="wSS-Vy-Jdv" secondAttribute="bottom" constant="18" id="uq3-ex-P4e"/>
                             <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="VLj-4L-6g8" secondAttribute="trailing" constant="100" id="wVO-SO-CG9"/>
