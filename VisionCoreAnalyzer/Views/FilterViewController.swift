@@ -56,8 +56,8 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
                 slidersStackView.spacing = 24
                 slidersStackView.addArrangedSubview(stack)
                 slidersStackView.isLayoutMarginsRelativeArrangement = true
-                // glitch: lefte 16 verince bozuluyor
-                slidersStackView.layoutMargins = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 16)
+
+                slidersStackView.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
 
             }
         }
