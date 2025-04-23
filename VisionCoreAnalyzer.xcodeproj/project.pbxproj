@@ -10,6 +10,8 @@
 		F22BEF2B2DB6DBA300E17843 /* FilterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22BEF2A2DB6DB9B00E17843 /* FilterCategory.swift */; };
 		F22BEF2D2DB6DDAD00E17843 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22BEF2C2DB6DDA700E17843 /* FilterViewController.swift */; };
 		F22BEF352DB6E71D00E17843 /* upload-image.png in Resources */ = {isa = PBXBuildFile; fileRef = F22BEF342DB6E71D00E17843 /* upload-image.png */; };
+		F26D60BD2DB838F4009E87F1 /* FilterSlidersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26D60BC2DB838F0009E87F1 /* FilterSlidersData.swift */; };
+		F26D60BF2DB8390B009E87F1 /* SliderOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26D60BE2DB83908009E87F1 /* SliderOptions.swift */; };
 		F271DD582DB5135200BB788F /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F271DD572DB5135200BB788F /* AppLabel.swift */; };
 		F2E9C3F62DB4FD3900E8F745 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9C3F52DB4FD3900E8F745 /* AppDelegate.swift */; };
 		F2E9C3F82DB4FD3900E8F745 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E9C3F72DB4FD3900E8F745 /* SceneDelegate.swift */; };
@@ -23,6 +25,8 @@
 		F22BEF2A2DB6DB9B00E17843 /* FilterCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCategory.swift; sourceTree = "<group>"; };
 		F22BEF2C2DB6DDA700E17843 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		F22BEF342DB6E71D00E17843 /* upload-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload-image.png"; sourceTree = "<group>"; };
+		F26D60BC2DB838F0009E87F1 /* FilterSlidersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSlidersData.swift; sourceTree = "<group>"; };
+		F26D60BE2DB83908009E87F1 /* SliderOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderOptions.swift; sourceTree = "<group>"; };
 		F271DD572DB5135200BB788F /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
 		F2E9C3F22DB4FD3900E8F745 /* VisionCoreAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionCoreAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E9C3F52DB4FD3900E8F745 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,13 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F22BEF2E2DB6E39900E17843 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		F22BEF2F2DB6E3C500E17843 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +77,8 @@
 		F271DD552DB5126E00BB788F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F26D60BE2DB83908009E87F1 /* SliderOptions.swift */,
+				F26D60BC2DB838F0009E87F1 /* FilterSlidersData.swift */,
 				F22BEF2A2DB6DB9B00E17843 /* FilterCategory.swift */,
 			);
 			path = Models;
@@ -120,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				F22BEF2F2DB6E3C500E17843 /* Resources */,
-				F22BEF2E2DB6E39900E17843 /* New Group */,
 				F2E9C3FB2DB4FD3900E8F745 /* Main.storyboard */,
 				F2E9C3FE2DB4FD3A00E8F745 /* Assets.xcassets */,
 				F2E9C4002DB4FD3A00E8F745 /* LaunchScreen.storyboard */,
@@ -163,7 +161,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					F2E9C3F12DB4FD3900E8F745 = {
 						CreatedOnToolsVersion = 15.2;
@@ -211,6 +209,8 @@
 				F2E9C3FA2DB4FD3900E8F745 /* ViewController.swift in Sources */,
 				F22BEF2B2DB6DBA300E17843 /* FilterCategory.swift in Sources */,
 				F2E9C3F62DB4FD3900E8F745 /* AppDelegate.swift in Sources */,
+				F26D60BD2DB838F4009E87F1 /* FilterSlidersData.swift in Sources */,
+				F26D60BF2DB8390B009E87F1 /* SliderOptions.swift in Sources */,
 				F271DD582DB5135200BB788F /* AppLabel.swift in Sources */,
 				F2E9C3F82DB4FD3900E8F745 /* SceneDelegate.swift in Sources */,
 			);
@@ -274,6 +274,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = G9HT48F9AL;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -338,6 +339,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = G9HT48F9AL;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -367,7 +369,6 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G9HT48F9AL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VisionCoreAnalyzer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Vision Core Analyzer";
@@ -399,7 +400,6 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G9HT48F9AL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VisionCoreAnalyzer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Vision Core Analyzer";

@@ -15,5 +15,6 @@ enum FilterCategory: Int {
         case .color: return "Color Effect"
         }
     }
+    // extension ile slider verileri bağlandı
 }
 
