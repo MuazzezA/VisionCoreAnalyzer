@@ -30,29 +30,30 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
         
         if let sliders = selectedCategory?.sliders {
             for (_, sliderOption) in sliders.enumerated() {
-                let label = UILabel()
+                let label = AppLabel()
                 label.text = sliderOption.title
-                label.heightAnchor.constraint(equalToConstant: 24).isActive = true
-                label.font = .systemFont(ofSize: 14)
+                label.styleRawValue = 1
+                label.heightAnchor.constraint(equalToConstant: 20).isActive = true
                 
                 let slider = UISlider()
                 slider.minimumValue = sliderOption.minValue
                 slider.maximumValue = sliderOption.maxValue
                 slider.value = sliderOption.defaultValue
-                label.heightAnchor.constraint(equalToConstant: 40).isActive = true
+                label.heightAnchor.constraint(equalToConstant: 38).isActive = true
                 slider.addTarget(self, action: #selector(sliderValueDidChange(_:)), for: .valueChanged)
                 
                 
                 let stack = UIStackView(arrangedSubviews: [label, slider])
                 stack.axis = .vertical
-                stack.spacing = 16
+                stack.spacing = 8
                 stack.alignment = .fill
                 stack.distribution = .fill
                 stack.translatesAutoresizingMaskIntoConstraints = false
 
                 // boyut kısıtlandırması ile UIStackView içindeki dengesizlik giderildi
-                stack.heightAnchor.constraint(equalToConstant: 64).isActive = true
+                // stack.heightAnchor.constraint(equalToConstant: 64).isActive = true
                
+                slidersStackView.spacing = 24
                 slidersStackView.addArrangedSubview(stack)
                 slidersStackView.isLayoutMarginsRelativeArrangement = true
                 // glitch: lefte 16 verince bozuluyor
