@@ -13,7 +13,6 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var uploadImageButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
-    let step: Float = 1 // todo: değiştir bunu
     var selectedCategory: FilterCategory?
     @IBOutlet weak var slidersStackView: UIStackView!
     @IBOutlet weak var slidersScrollView: UIScrollView!
@@ -21,7 +20,9 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        filterLabel.text = selectedCategory?.title
+        
         slidersScrollView.translatesAutoresizingMaskIntoConstraints = false
         slidersStackView.axis = .vertical
         slidersStackView.spacing = 8
@@ -29,19 +30,20 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
         slidersStackView.distribution = .fill
         
         if let sliders = selectedCategory?.sliders {
-            for (_, sliderOption) in sliders.enumerated() {
+            for (index, sliderOption) in sliders.enumerated() {
                 let label = AppLabel()
                 label.text = sliderOption.title
                 label.styleRawValue = 1
                 // label.heightAnchor.constraint(equalToConstant: 20).isActive = true
                 
                 let slider = UISlider()
+                slider.accessibilityLabel = sliderOption.title
+                slider.tag = index
                 slider.minimumValue = sliderOption.minValue
                 slider.maximumValue = sliderOption.maxValue
                 slider.value = sliderOption.defaultValue
                 // slider.heightAnchor.constraint(equalToConstant: 38).isActive = true
                 slider.addTarget(self, action: #selector(sliderValueDidChange(_:)), for: .valueChanged)
-                
                 
                 let stack = UIStackView(arrangedSubviews: [label, slider])
                 stack.axis = .vertical
@@ -49,21 +51,21 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
                 stack.alignment = .fill
                 stack.distribution = .fill
                 stack.translatesAutoresizingMaskIntoConstraints = false
-
+                
                 // boyut kısıtlandırması ile UIStackView içindeki dengesizlik giderildi
                 // stack.heightAnchor.constraint(equalToConstant: 64).isActive = true
-               
+                
                 slidersStackView.spacing = 24
                 slidersStackView.addArrangedSubview(stack)
                 slidersStackView.isLayoutMarginsRelativeArrangement = true
-
+                
                 slidersStackView.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
-
+                
             }
         }
         
     }
-   
+    
     
     @IBAction func uploadImageButtonTapped(_ sender: UIButton) {
         let imagePicker = UIImagePickerController()
@@ -87,9 +89,16 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     @objc func sliderValueDidChange(_ sender: UISlider){
-        let roundedStepValue = round(sender.value / step) * step
-        sender.value = roundedStepValue
-        print("Slider step value \(Int(roundedStepValue))")
+        if let sliderOption = selectedCategory?.sliders[sender.tag] {
+            let step = sliderOption.step
+            let roundedStepValue = round(sender.value / step) * step
+            
+            // x.y şeklinde alacak
+            let formattedValue = String(format: "%.1f", roundedStepValue)
+            
+            sender.value = roundedStepValue
+            print("Slider \(sliderOption.title) step value: \(formattedValue)")
+        }
     }
     
     @IBAction func applyButtonTapped(_ sender: UIButton) {

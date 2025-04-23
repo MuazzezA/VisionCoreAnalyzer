@@ -10,4 +10,5 @@ struct SliderOption {
     let minValue: Float
     let maxValue: Float
     let defaultValue: Float
+    let step: Float
 }
