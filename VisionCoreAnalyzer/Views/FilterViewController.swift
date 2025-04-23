@@ -13,10 +13,11 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var uploadImageButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
-    var selectedCategory: FilterCategory?
     @IBOutlet weak var slidersStackView: UIStackView!
     @IBOutlet weak var slidersScrollView: UIScrollView!
     
+    var selectedCategory: FilterCategory?
+    var sliderValues: [String: Float] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,8 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
                 slider.value = sliderOption.defaultValue
                 // slider.heightAnchor.constraint(equalToConstant: 38).isActive = true
                 slider.addTarget(self, action: #selector(sliderValueDidChange(_:)), for: .valueChanged)
+                
+                sliderValues[sliderOption.title] = sliderOption.defaultValue
                 
                 let stack = UIStackView(arrangedSubviews: [label, slider])
                 stack.axis = .vertical
@@ -92,16 +95,18 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
         if let sliderOption = selectedCategory?.sliders[sender.tag] {
             let step = sliderOption.step
             let roundedStepValue = round(sender.value / step) * step
-            
             // x.y şeklinde alacak
             let formattedValue = String(format: "%.1f", roundedStepValue)
-            
             sender.value = roundedStepValue
-            print("Slider \(sliderOption.title) step value: \(formattedValue)")
+            sliderValues[sliderOption.title] = roundedStepValue
         }
     }
     
     @IBAction func applyButtonTapped(_ sender: UIButton) {
         print("apply changes")
+        for (key, value) in sliderValues {
+            let formatted = String(format: "%.1f", value)
+            print("\(key): \(formatted)")
+        }
     }
 }
