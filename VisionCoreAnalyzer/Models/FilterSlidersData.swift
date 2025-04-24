@@ -26,8 +26,8 @@ struct SliderData {
     ]
     
     static let colorOptions: [SliderOption] = [
-        SliderOption(title: "Brightness", minValue: -1, maxValue: 1, defaultValue: 0, step: 0.2),
-        SliderOption(title: "Saturation", minValue: 0, maxValue: 2, defaultValue: 1, step: 0.5),
+        SliderOption(title: "Brightness", minValue: -1, maxValue: 1, defaultValue: 0, step: 0.1),
+        SliderOption(title: "Saturation", minValue: 0, maxValue: 2, defaultValue: 1, step: 0.1),
         SliderOption(title: "Contrast", minValue: 0.5, maxValue: 1.5, defaultValue: 1, step: 0.1)
     ]
 }

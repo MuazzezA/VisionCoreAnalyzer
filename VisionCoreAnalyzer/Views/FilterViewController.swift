@@ -18,6 +18,7 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
     
     var selectedCategory: FilterCategory?
     var sliderValues: [String: Float] = [:]
+    var originalImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,6 +84,7 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage{
             imageView.image = image
+            originalImage = image
             uploadImageButton.setTitle("Change Image", for: .normal)
         } else{
             print("Upload image error")
@@ -96,17 +98,29 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
             let step = sliderOption.step
             let roundedStepValue = round(sender.value / step) * step
             // x.y şeklinde alacak
-            let formattedValue = String(format: "%.1f", roundedStepValue)
             sender.value = roundedStepValue
             sliderValues[sliderOption.title] = roundedStepValue
         }
     }
     
     @IBAction func applyButtonTapped(_ sender: UIButton) {
-        print("apply changes")
-        for (key, value) in sliderValues {
-            let formatted = String(format: "%.1f", value)
-            print("\(key): \(formatted)")
+        
+        guard let originalImage = originalImage,
+              let ciImage = ImageFilterHelper.convertToCIImage(originalImage) else {
+            print("Görsel bulunamadı.")
+            return
         }
+        
+        //        let brightness = Double(sliderValues["Brightness"] ?? 0)
+        //        let saturation = Double(sliderValues["Saturation"] ?? 1)
+        //        let contrast = Double(sliderValues["Contrast"] ?? 1)
+        //
+        //        if let filteredCIImage = ColorFilter.colorControls(ciImage, brightness: brightness, contrast: contrast, saturation: saturation),
+        //           let filteredUIImage = ImageFilterHelper.convertToUIImage(filteredCIImage) {
+        //            imageView.image = filteredUIImage
+        //            print("Filtre başarıyla uygulandı.")
+        //        } else {
+        //            print("Filtre uygulama başarısız.")
+        //        }
     }
 }
