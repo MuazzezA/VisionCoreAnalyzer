@@ -10,6 +10,7 @@
 		F2126C072DBAC2FC00FA95D5 /* ImageFilterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2126C062DBAC2F900FA95D5 /* ImageFilterHelper.swift */; };
 		F2126C0B2DBAC38900FA95D5 /* BlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2126C0A2DBAC38600FA95D5 /* BlurFilter.swift */; };
 		F2126C0D2DBAC39000FA95D5 /* ColorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2126C0C2DBAC38D00FA95D5 /* ColorFilter.swift */; };
+		F2126C112DBACE1600FA95D5 /* zoom-in.png in Resources */ = {isa = PBXBuildFile; fileRef = F2126C102DBACE1600FA95D5 /* zoom-in.png */; };
 		F22BEF2B2DB6DBA300E17843 /* FilterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22BEF2A2DB6DB9B00E17843 /* FilterCategory.swift */; };
 		F22BEF2D2DB6DDAD00E17843 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22BEF2C2DB6DDA700E17843 /* FilterViewController.swift */; };
 		F22BEF352DB6E71D00E17843 /* upload-image.png in Resources */ = {isa = PBXBuildFile; fileRef = F22BEF342DB6E71D00E17843 /* upload-image.png */; };
@@ -28,6 +29,7 @@
 		F2126C062DBAC2F900FA95D5 /* ImageFilterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterHelper.swift; sourceTree = "<group>"; };
 		F2126C0A2DBAC38600FA95D5 /* BlurFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurFilter.swift; sourceTree = "<group>"; };
 		F2126C0C2DBAC38D00FA95D5 /* ColorFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFilter.swift; sourceTree = "<group>"; };
+		F2126C102DBACE1600FA95D5 /* zoom-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zoom-in.png"; sourceTree = "<group>"; };
 		F22BEF2A2DB6DB9B00E17843 /* FilterCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCategory.swift; sourceTree = "<group>"; };
 		F22BEF2C2DB6DDA700E17843 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		F22BEF342DB6E71D00E17843 /* upload-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "upload-image.png"; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		F22BEF2F2DB6E3C500E17843 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F2126C102DBACE1600FA95D5 /* zoom-in.png */,
 				F22BEF342DB6E71D00E17843 /* upload-image.png */,
 			);
 			path = Resources;
@@ -208,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2126C112DBACE1600FA95D5 /* zoom-in.png in Resources */,
 				F2E9C4022DB4FD3A00E8F745 /* LaunchScreen.storyboard in Resources */,
 				F2E9C3FF2DB4FD3A00E8F745 /* Assets.xcassets in Resources */,
 				F2E9C3FD2DB4FD3900E8F745 /* Main.storyboard in Resources */,

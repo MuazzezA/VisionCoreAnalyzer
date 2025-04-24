@@ -19,6 +19,7 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
     var selectedCategory: FilterCategory?
     var sliderValues: [String: Float] = [:]
     var originalImage: UIImage?
+    var isAvaliableImage = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,10 +82,24 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     
+    @IBAction func fitImage(_ sender: UIGestureRecognizer) {
+        guard isAvaliableImage else { return }
+        
+        switch imageView.contentMode {
+        case .center:
+            imageView.contentMode = .scaleAspectFit
+        case .scaleAspectFit:
+            imageView.contentMode = .center
+        default:
+            imageView.contentMode = .scaleAspectFit
+        }
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage{
             imageView.image = image
             originalImage = image
+            isAvaliableImage = true
             uploadImageButton.setTitle("Change Image", for: .normal)
         } else{
             print("Upload image error")

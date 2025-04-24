@@ -218,6 +218,31 @@
                                     <action selector="applyButtonTapped:" destination="emD-f3-6Ci" eventType="touchUpInside" id="L17-9Q-MTt"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ie-ls-eS9" userLabel="FitView">
+                                <rect key="frame" x="346" y="420" width="24" height="24"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoom-in.png" translatesAutoresizingMaskIntoConstraints="NO" id="zLg-Lh-Hpa">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="XOp-TP-Kk6"/>
+                                            <constraint firstAttribute="width" constant="24" id="cAL-1S-zs4"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zLg-Lh-Hpa" secondAttribute="bottom" id="4Vq-Uq-Owr"/>
+                                    <constraint firstAttribute="width" constant="24" id="DPY-Ym-c5a"/>
+                                    <constraint firstAttribute="trailing" secondItem="zLg-Lh-Hpa" secondAttribute="trailing" id="UQ4-JR-Rdg"/>
+                                    <constraint firstAttribute="height" constant="24" id="eKR-HG-FZP"/>
+                                    <constraint firstItem="zLg-Lh-Hpa" firstAttribute="leading" secondItem="1Ie-ls-eS9" secondAttribute="leading" id="nuI-Lx-edk"/>
+                                    <constraint firstItem="zLg-Lh-Hpa" firstAttribute="top" secondItem="1Ie-ls-eS9" secondAttribute="top" id="zaH-de-lNs"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fK1-LQ-h0o" appends="YES" id="yE8-hI-dDl"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cqF-u3-P5O"/>
                         <color key="backgroundColor" name="Background"/>
@@ -226,12 +251,15 @@
                             <constraint firstItem="0WI-Ca-vR0" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="16" id="2mv-Cg-HH2"/>
                             <constraint firstItem="hGr-3Z-OER" firstAttribute="bottom" secondItem="cqF-u3-P5O" secondAttribute="bottom" id="7kY-LC-pMa"/>
                             <constraint firstItem="hGr-3Z-OER" firstAttribute="top" secondItem="wk3-ZM-RTz" secondAttribute="bottom" constant="4" id="8Hy-Mv-eZ0"/>
+                            <constraint firstItem="wk3-ZM-RTz" firstAttribute="top" secondItem="1Ie-ls-eS9" secondAttribute="bottom" constant="21" id="Fxc-nk-V2l"/>
                             <constraint firstItem="wk3-ZM-RTz" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" id="Gtp-TK-U4l"/>
                             <constraint firstItem="wk3-ZM-RTz" firstAttribute="top" secondItem="VLj-4L-6g8" secondAttribute="bottom" constant="15" id="LiM-OI-Vip"/>
                             <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="wSS-Vy-Jdv" secondAttribute="trailing" constant="20" id="P9W-Kv-9if"/>
+                            <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="1Ie-ls-eS9" secondAttribute="trailing" constant="20" id="R6L-xE-SeD"/>
                             <constraint firstItem="0WI-Ca-vR0" firstAttribute="top" secondItem="cqF-u3-P5O" secondAttribute="top" constant="4" id="ThX-JN-1dw"/>
                             <constraint firstItem="hGr-3Z-OER" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="100" id="aLl-eT-huW"/>
                             <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="0WI-Ca-vR0" secondAttribute="trailing" constant="16" id="cUh-yb-tJ1"/>
+                            <constraint firstItem="1Ie-ls-eS9" firstAttribute="top" secondItem="wSS-Vy-Jdv" secondAttribute="bottom" constant="23" id="e5y-4y-wSg"/>
                             <constraint firstItem="wk3-ZM-RTz" firstAttribute="trailing" secondItem="cqF-u3-P5O" secondAttribute="trailing" id="fy9-mX-N35"/>
                             <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="hGr-3Z-OER" secondAttribute="trailing" constant="100" id="kSp-t3-MGl"/>
                             <constraint firstItem="wSS-Vy-Jdv" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="20" id="n24-e0-0cG"/>
@@ -250,6 +278,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Pm-uO-OXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fK1-LQ-h0o">
+                    <connections>
+                        <action selector="fitImage:" destination="emD-f3-6Ci" id="MrB-5a-6te"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1912.3076923076922" y="-6.3981042654028437"/>
         </scene>
@@ -275,6 +308,7 @@
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="upload-image.png" width="500" height="500"/>
+        <image name="zoom-in.png" width="512" height="512"/>
         <namedColor name="Background">
             <color red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
