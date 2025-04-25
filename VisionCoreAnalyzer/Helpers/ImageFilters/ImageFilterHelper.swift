@@ -26,7 +26,7 @@ enum ImageFilterHelper {
         static let boxBlur = BlurFilter.boxBlur
     }
     
-    enum Color {
-        static let colorControls = ColorFilter.colorControls
+    enum ColorAdjustment {
+        static let colorControls = ColorAdjustmentFilter.colorControls
     }
 }

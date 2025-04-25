@@ -17,7 +17,7 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var slidersScrollView: UIScrollView!
     
     var selectedCategory: FilterCategory?
-    var sliderValues: [String: Float] = [:]
+    var sliderValues: [FilterParameterKey: Float] = [:]
     var originalImage: UIImage?
     var isAvaliableImage = false
     
@@ -48,7 +48,7 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
                 // slider.heightAnchor.constraint(equalToConstant: 38).isActive = true
                 slider.addTarget(self, action: #selector(sliderValueDidChange(_:)), for: .valueChanged)
                 
-                sliderValues[sliderOption.title] = sliderOption.defaultValue
+                sliderValues[sliderOption.key] = sliderOption.defaultValue
                 
                 let stack = UIStackView(arrangedSubviews: [label, slider])
                 stack.axis = .vertical
@@ -112,9 +112,8 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
         if let sliderOption = selectedCategory?.sliders[sender.tag] {
             let step = sliderOption.step
             let roundedStepValue = round(sender.value / step) * step
-            // x.y şeklinde alacak
             sender.value = roundedStepValue
-            sliderValues[sliderOption.title] = roundedStepValue
+            sliderValues[sliderOption.key] = roundedStepValue
         }
     }
     
@@ -126,16 +125,13 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
             return
         }
         
-        //        let brightness = Double(sliderValues["Brightness"] ?? 0)
-        //        let saturation = Double(sliderValues["Saturation"] ?? 1)
-        //        let contrast = Double(sliderValues["Contrast"] ?? 1)
-        //
-        //        if let filteredCIImage = ColorFilter.colorControls(ciImage, brightness: brightness, contrast: contrast, saturation: saturation),
-        //           let filteredUIImage = ImageFilterHelper.convertToUIImage(filteredCIImage) {
-        //            imageView.image = filteredUIImage
-        //            print("Filtre başarıyla uygulandı.")
-        //        } else {
-        //            print("Filtre uygulama başarısız.")
-        //        }
+        guard let selectedCategory = selectedCategory,
+              let filteredCIImage = applyFilters(ciImage, filterType: selectedCategory, rawValues: sliderValues),
+              let filteredUIImage = ImageFilterHelper.convertToUIImage(filteredCIImage) else {
+            print("Filtre uygulanamadı.")
+            return
+        }
+        
+        imageView.image = filteredUIImage
     }
 }
