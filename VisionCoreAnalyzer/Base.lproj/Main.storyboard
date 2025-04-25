@@ -243,15 +243,43 @@
                                     <outletCollection property="gestureRecognizers" destination="fK1-LQ-h0o" appends="YES" id="yE8-hI-dDl"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jY-UF-a0r" userLabel="SaveImageView">
+                                <rect key="frame" x="20" y="420" width="24" height="24"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download.png" translatesAutoresizingMaskIntoConstraints="NO" id="yGq-pt-oMV">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="ANV-a6-IfA"/>
+                                            <constraint firstAttribute="width" constant="24" id="AOM-5o-wdY"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="1AC-iu-G1G"/>
+                                    <constraint firstAttribute="height" constant="24" id="Qfs-0w-RCd"/>
+                                    <constraint firstAttribute="trailing" secondItem="yGq-pt-oMV" secondAttribute="trailing" id="Szc-n4-LVl"/>
+                                    <constraint firstItem="yGq-pt-oMV" firstAttribute="top" secondItem="7jY-UF-a0r" secondAttribute="top" id="U1W-Hz-1Rk"/>
+                                    <constraint firstAttribute="bottom" secondItem="yGq-pt-oMV" secondAttribute="bottom" id="XUS-tX-XFi"/>
+                                    <constraint firstItem="yGq-pt-oMV" firstAttribute="leading" secondItem="7jY-UF-a0r" secondAttribute="leading" id="kfI-py-U3b"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="zwq-wQ-a84" appends="YES" id="xrm-NB-BcW"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cqF-u3-P5O"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="VLj-4L-6g8" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="100" id="1b6-jo-3Fh"/>
                             <constraint firstItem="0WI-Ca-vR0" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="16" id="2mv-Cg-HH2"/>
+                            <constraint firstItem="7jY-UF-a0r" firstAttribute="top" secondItem="wSS-Vy-Jdv" secondAttribute="bottom" constant="23" id="2qk-tt-Hqs"/>
                             <constraint firstItem="hGr-3Z-OER" firstAttribute="bottom" secondItem="cqF-u3-P5O" secondAttribute="bottom" id="7kY-LC-pMa"/>
                             <constraint firstItem="hGr-3Z-OER" firstAttribute="top" secondItem="wk3-ZM-RTz" secondAttribute="bottom" constant="4" id="8Hy-Mv-eZ0"/>
+                            <constraint firstItem="wk3-ZM-RTz" firstAttribute="top" secondItem="7jY-UF-a0r" secondAttribute="bottom" constant="21" id="Bgw-Ko-LvG"/>
                             <constraint firstItem="wk3-ZM-RTz" firstAttribute="top" secondItem="1Ie-ls-eS9" secondAttribute="bottom" constant="21" id="Fxc-nk-V2l"/>
+                            <constraint firstItem="7jY-UF-a0r" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" constant="20" id="GgU-wf-28A"/>
                             <constraint firstItem="wk3-ZM-RTz" firstAttribute="leading" secondItem="cqF-u3-P5O" secondAttribute="leading" id="Gtp-TK-U4l"/>
                             <constraint firstItem="wk3-ZM-RTz" firstAttribute="top" secondItem="VLj-4L-6g8" secondAttribute="bottom" constant="15" id="LiM-OI-Vip"/>
                             <constraint firstItem="cqF-u3-P5O" firstAttribute="trailing" secondItem="wSS-Vy-Jdv" secondAttribute="trailing" constant="20" id="P9W-Kv-9if"/>
@@ -283,6 +311,11 @@
                         <action selector="fitImage:" destination="emD-f3-6Ci" id="MrB-5a-6te"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="zwq-wQ-a84">
+                    <connections>
+                        <action selector="saveImage:" destination="emD-f3-6Ci" id="fk2-6k-1Po"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1912.3076923076922" y="-6.3981042654028437"/>
         </scene>
@@ -307,6 +340,7 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="download.png" width="512" height="512"/>
         <image name="upload-image.png" width="500" height="500"/>
         <image name="zoom-in.png" width="512" height="512"/>
         <namedColor name="Background">

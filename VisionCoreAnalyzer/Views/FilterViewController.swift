@@ -95,6 +95,21 @@ class FilterViewController: UIViewController, UINavigationControllerDelegate, UI
         }
     }
     
+    @IBAction func saveImage(_ sender: UIGestureRecognizer) {
+        guard isAvaliableImage else { return }
+        // selector ile sonucu aldık, istersen nil de koyabilirdin
+        UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(imageSaved(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    @objc func imageSaved(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            print("Failed to save image: \(error.localizedDescription)")
+            showAlertMessage(message: "An error occurred while saving to gallery", viewController: self)
+        } else {
+            showAlertMessage(message: "The processed image is saved to the gallery", viewController: self)
+        }
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage{
             imageView.image = image
