@@ -7,7 +7,7 @@
 
 enum FilterParameterKey {
     case boxBlur, gaussianBlur, motionBlur
-    case brightness, saturation, contrast, expose
+    case brightness, saturation, contrast, expose, whitePointAdjust 
 }
 
 struct SliderOption {

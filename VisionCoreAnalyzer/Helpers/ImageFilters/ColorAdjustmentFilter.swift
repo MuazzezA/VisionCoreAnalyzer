@@ -28,4 +28,16 @@ enum ColorAdjustmentFilter {
         
         return filter?.outputImage
     }
+    
+    static func whitePointAdjust(_ ciImage: CIImage, whiteP: Double) -> CIImage? {
+        // guard ile yaparsan daha iyi
+        guard let filter = CIFilter(name: "CIWhitePointAdjust") else { return nil }
+        filter.setValue(ciImage, forKey: kCIInputImageKey)
+        
+        let color = CIColor(red: CGFloat(whiteP), green: CGFloat(whiteP), blue: CGFloat(whiteP))
+        filter.setValue(color, forKey: kCIInputColorKey)
+        
+        return filter.outputImage
+    }
+
 }

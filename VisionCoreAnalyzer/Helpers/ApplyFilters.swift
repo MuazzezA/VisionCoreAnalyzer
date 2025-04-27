@@ -52,6 +52,7 @@ func applyColorFilters(_ ciImage: CIImage, rawValues: [FilterParameterKey: Float
     let saturation = Double(rawValues[.saturation] ?? 1)
     let contrast = Double(rawValues[.contrast] ?? 1)
     let expose = Double(rawValues[.expose] ?? 1)
+    let whitePointAdjust = Double(rawValues[.whitePointAdjust] ?? 0)
     
     var outputImage = ciImage
     
@@ -59,6 +60,13 @@ func applyColorFilters(_ ciImage: CIImage, rawValues: [FilterParameterKey: Float
     
     if expose > 0 {
         if let result = ColorAdjustmentFilter.exposureAdjust(outputImage, exposeEV: expose) {
+            outputImage = result
+        }
+    }
+    
+    if whitePointAdjust > 0 {
+        // normalde inputColor alacak, sliderdan hepsini çevirdik
+        if let result = ColorAdjustmentFilter.whitePointAdjust(outputImage, whiteP: whitePointAdjust) {
             outputImage = result
         }
     }

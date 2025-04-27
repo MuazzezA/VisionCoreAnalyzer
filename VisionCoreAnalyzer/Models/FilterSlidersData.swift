@@ -29,7 +29,8 @@ struct SliderData {
         SliderOption(key: .brightness, title: "Brightness", minValue: -1, maxValue: 1, defaultValue: 0, step: 0.1),
         SliderOption(key: .saturation, title: "Saturation", minValue: 0, maxValue: 2, defaultValue: 1, step: 0.1),
         SliderOption(key: .contrast, title: "Contrast", minValue: 0.5, maxValue: 1.5, defaultValue: 1, step: 0.1),
-        SliderOption(key: .contrast, title: "Exposure Adjust", minValue: 0.0, maxValue: 2, defaultValue: 0.50, step: 0.1)
+        SliderOption(key: .contrast, title: "Exposure Adjust", minValue: 0.0, maxValue: 2, defaultValue: 0.50, step: 0.1),
+        SliderOption(key: .whitePointAdjust, title: "White Point Adjust", minValue: 0.0, maxValue: 1, defaultValue: 0.0, step: 0.2)
     ]
     
 }
